@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container-lowest: #050505;
+  --color-surface-dim: #0a0a0a;
+  --color-surface: #0e0e0e;
+  --color-surface-container-low: #121212;
+  --color-surface-container: #161616;
+  --color-surface-container-high: #1c1c1c;
+  --color-surface-container-highest: #242424;
+  --color-surface-variant: #282828;
+  --color-surface-bright: #303030;
+
+  --color-primary: #8e7d5d;
+  --color-primary-container: #c8b99d;
+  --color-on-primary: #050505;
+  --color-on-primary-container: #1a1712;
+  --color-primary-fixed: #ece7de;
+  --color-primary-fixed-dim: #8e7d5d;
+
+  --color-secondary: #d4d4d4;
+  --color-secondary-container: #262626;
+  --color-on-secondary: #050505;
+  --color-on-secondary-container: #a3a3a3;
+
+  --color-tertiary: #c8b99d;
+  --color-tertiary-container: #3d3527;
+  --color-on-tertiary: #050505;
+
+  --color-on-surface: #f5f5f5;
+  --color-on-surface-variant: #a3a3a3;
+  --color-outline: #8e7d5d;
+  --color-outline-variant: #2e2820;
+
+  --font-headline: "Cinzel", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.masonry-grid {
+  column-count: 2;
+  column-gap: 1.25rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+.subtle-grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+@keyframes subtleGoldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(142, 125, 93, 0.2), 0 0 30px rgba(200, 185, 157, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(142, 125, 93, 0.4), 0 0 45px rgba(200, 185, 157, 0.2);
+  }
+}
+
+.glow-primary {
+  animation: subtleGoldPulse 4s infinite ease-in-out;
+}
